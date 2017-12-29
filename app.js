@@ -150,7 +150,6 @@ Gobang.prototype._next = function(position) {
 Gobang.prototype.backStep = function(target) {
     var vm = this;
     if(vm._chessDatas.length < 1) return;
-    vm._status = 0;//若在棋局结束后悔棋，则回到对战状态
     var lastStep = vm._chessDatas.pop();
     vm._backStepDatas.push(lastStep);
     vm._role = 1- vm._role;
@@ -362,6 +361,8 @@ Gobang.prototype.init = function() {
                     vm._status = 1;
                     var msg = vm._role ? vm._msgs.whiteWin : vm._msgs.blackWin;
                     setTimeout(function() {
+                        vm._reset.setAttribute("disabled", true);
+                        vm._back_reset.setAttribute("disabled", true);
                         vm._showMsg(msg, 10000);
                     }, 300);
                 } else {
@@ -382,6 +383,8 @@ Gobang.prototype.init = function() {
                     vm._status = 1;
                     var msg = vm._role ? vm._msgs.whiteWin : vm._msgs.blackWin;
                     setTimeout(function() {
+                        vm._reset.setAttribute("disabled", true);
+                        vm._back_reset.setAttribute("disabled", true);
                         vm._showMsg(msg, 10000);
                     }, 300);
                 } else {
@@ -408,6 +411,8 @@ Gobang.prototype.init = function() {
                     vm._status = 1;
                     var msg = vm._role ? vm._msgs.whiteWin : vm._msgs.blackWin;
                     setTimeout(function() {
+                        vm._reset.setAttribute("disabled", true);
+                        vm._back_reset.setAttribute("disabled", true);
                         vm._showMsg(msg, 10000);
                     }, 300);
                 } else {
@@ -431,6 +436,8 @@ Gobang.prototype.init = function() {
                     vm._status = 1;
                     var msg = vm._role ? vm._msgs.whiteWin : vm._msgs.blackWin;
                     setTimeout(function() {
+                        vm._reset.setAttribute("disabled", true);
+                        vm._back_reset.setAttribute("disabled", true);
                         vm._showMsg(msg, 10000);
                     }, 300);
                 } else {
