@@ -153,7 +153,7 @@
         <button id="replay">新一局</button>
         <button id="reset">悔棋</button>
         <button id="back_reset">撤销悔棋</button>
-        <button id="vs_ai">人机对战</button>
+        <!--<button id="vs_ai">人机对战</button>-->
     </div>
     <div id="chessboard_container" class="chessboard-container "></div>
     <div id="chessboard_canvas_container" class="chessboard-canvas-container ">
@@ -256,8 +256,8 @@
 
             if(position == undefined || position == null) return;
 
-            var x = ((position % 15) + 0.5) * 30;
-            var y = (parseInt((position / 15), 10) + 0.5) * 30;
+            var x = 4+ ((position % 15) + 0.5) * 30;
+            var y = 4+ (parseInt((position / 15), 10) + 0.5) * 30;
             vm._chessContext.beginPath();
             vm._chessContext.arc(x, y, 13, 0, 2 * Math.PI);// 画圆
             //定义棋子颜色
