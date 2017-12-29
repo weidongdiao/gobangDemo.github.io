@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    color: #108ee9;
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+}
+div.version-selector-container {
+    font-size: 14px;
+    text-align: center;
+}
+div.version-selector-container > select {
+    padding: 5px;
+    height: 30px;
+    line-height: 30px;
+}
+div.msg-container {
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 16px;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #3498db;
+    background-color: #ecf6fd;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    opacity: 0.9;
+    z-index: 10;
+}
+div.msg-container.show {
+    display: block;
+}
+div.chessboard-container {
+    display: none;
+    box-shadow: -2px -2px 2px #efefef, 5px 5px 5px #b9b9b9;
+    width: 450px;
+    height: 450px;
+    padding: 4px;
+    margin: 20px auto;
+    background-image: url(http://read.pudn.com/downloads113/sourcecode/game/475575/GoBang/%CE%E5%D7%D3%C6%E5__.jpg);
+    background-size: cover;
+}
+div.chessboard-container.show {
+    display: block;
+}
+div.chessboard-container.hidden {
+    display: none;
+}
+div.chessboard-container > div.chess-grid {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+div.chessboard-container > div.chess-grid:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+div.chessboard-container > div.chess-grid.black-chess {
+    width: 26px;
+    height: 26px;
+    margin: 2px;
+    background: -moz-linear-gradient(left 90deg, #0a0a0a, #636766);
+    background: -webkit-gradient(linear, 50% 100%,50% 0%, from(#0a0a0a),to(#636766));
+    background: -o-linear-gradient(90deg, #0a0a0a, #636766);
+}
+div.chessboard-container > div.chess-grid.white-chess {
+    width: 26px;
+    height: 26px;
+    margin: 2px;
+    background: -moz-linear-gradient(left 90deg, #d1d1d1, #f9f9f9);
+    background: -webkit-gradient(linear, 50% 100%,50% 0%, from(#d1d1d1),to(#f9f9f9));
+    background: -o-linear-gradient(90deg, #d1d1d1, #f9f9f9);
+}
+
+div.chessboard-canvas-container {
+    display: none;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    padding: 4px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+div.chessboard-canvas-container.show {
+    display: block;
+}
+div.chessboard-canvas-container.hidden {
+    display: none;
+}
+div.chessboard-canvas-container canvas {
+    box-shadow: -2px -2px 2px #efefef, 5px 5px 5px #b9b9b9;
+    background-image: url(http://read.pudn.com/downloads113/sourcecode/game/475575/GoBang/%CE%E5%D7%D3%C6%E5__.jpg);
+    background-size: cover;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+}
+div.bar-container {
+    text-align: center;
+    margin: 10px auto;
+}
+div.bar-container > button {
+    background-color: #108ee9;
+    border: 1px solid #108ee9;
+    outline: 0;
+    padding: 0 15px;
+    font-size: 15px;
+    border-radius: 4px;
+    height: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+div.bar-container > button:hover {
+    opacity: 0.8;
+}
+div.bar-container > button.disabled {
+    opacity: 0.5;
+    cursor: pointer;
+}
